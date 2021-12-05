@@ -18,6 +18,8 @@ User.belongsToMany(Post, {
     foreignKey: 'user_id'
 });
 
+// setting relationship
+// one post can belong to many users
 Post.belongsToMany(User, {
     through: Vote,
     as: 'voted_posts',
